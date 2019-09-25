@@ -1,8 +1,7 @@
 // data from staffMemberValidation
 
 function MemberId_Validation(SheetName, thisRow, FormName, StaffName) {
-  SheetName = "MemberNotes"
-  thisRow = 20
+
 
   
   var t = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Database");

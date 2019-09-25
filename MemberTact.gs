@@ -1,4 +1,4 @@
-// data from 
+// data from ProcessingVariables.gs
 
 function MemberTact(SheetName, Row, z, zcols, t) {
   

@@ -15,14 +15,7 @@ function MemberLockerInformation(thisRow, SheetName, StaffName) {
     
   }
   FormName = FormName[SheetName];
-  //SheetName = "LockerRegistration-Renewal"
-  /* 
-  // defining FormName of sheet 
-  
-  thisRow = 22
-  SheetName = "LockerRegistration-Renewal"
-  StaffName = "Jordan"
-  */
+
   // defining month dictionary
   var months = {
     "Jan":1,

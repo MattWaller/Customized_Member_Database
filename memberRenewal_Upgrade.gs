@@ -1,6 +1,6 @@
+// data from ProcessingVariables.gs
 function memberRenewal_Upgrade(SheetName,thisRow) {
-  //var SheetName = "MemberRenewal-Upgrade";
-  //var thisRow = 19
+
   var t = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Database");
   
   var t_cols = t.getLastColumn();

@@ -107,7 +107,7 @@ function ValidationTests(SheetName, thisRow, FormName, StaffName, vts) {
     if (SM_passcode != form_passcode){
       
       Logger.log("passcode Failed! -- validation denied");
-      // validation fails --> email sent to info@therangelangley.com & row added to FailedStaffValidation spreadsheet
+      // validation fails --> email sent to EMAIL_ADDRESS & row added to FailedStaffValidation spreadsheet
       
       // pass variables to email
       ValidationTestOne (StaffName,FormName)
@@ -158,7 +158,7 @@ function ValidationTests(SheetName, thisRow, FormName, StaffName, vts) {
     if (members.indexOf(memberNo) < 0 ){
       
       Logger.log("passcode Failed! -- validation denied");
-      // validation fails --> email sent to info@therangelangley.com & row added to FailedStaffValidation spreadsheet
+      // validation fails --> email sent to EMAIL_ADDRESS & row added to FailedStaffValidation spreadsheet
       
       // pass variables to email
       
@@ -226,7 +226,7 @@ function ValidationTests(SheetName, thisRow, FormName, StaffName, vts) {
     if(String(db_birthdate) != String(birthdate)){
       
       Logger.log("passcode Failed! -- validation denied");
-      // validation fails --> email sent to info@therangelangley.com & row added to FailedStaffValidation spreadsheet
+      // validation fails --> email sent to EMAIL_ADDRESS & row added to FailedStaffValidation spreadsheet
       
       // pass variables to email
       
@@ -317,7 +317,7 @@ function ValidationTests(SheetName, thisRow, FormName, StaffName, vts) {
         
         if (approvedMTs.indexOf(pm_memberType) < 0){ 
           
-          // validation fails --> email sent to info@therangelangley.com & row added to FailedStaffValidation spreadsheet
+          // validation fails --> email sent to EMAIL_ADDRESS & row added to FailedStaffValidation spreadsheet
           
           // pass variables to email
           
@@ -356,7 +356,7 @@ function ValidationTests(SheetName, thisRow, FormName, StaffName, vts) {
       }
       // Member type falls outside Pending and approved member types --> therefore is ineligible for add-on
       if(memberType != "PEN"){
-      // validation fails --> email sent to info@therangelangley.com & row added to FailedStaffValidation spreadsheet
+      // validation fails --> email sent to EMAIL_ADDRESS & row added to FailedStaffValidation spreadsheet
       
       // pass variables to email
       ValidationTestFourEmail(StaffName, memberNo, memberType, FormName)
@@ -411,7 +411,7 @@ function ValidationTests(SheetName, thisRow, FormName, StaffName, vts) {
       
       // member is an add-on account --> email info
       
-      // validation fails --> email sent to info@therangelangley.com & row added to FailedStaffValidation spreadsheet
+      // validation fails --> email sent to EMAIL_ADDRESS & row added to FailedStaffValidation spreadsheet
       
       // pass variables to email
       
@@ -495,7 +495,7 @@ function ValidationTests(SheetName, thisRow, FormName, StaffName, vts) {
         // member number does not own any locker
         
         
-        // validation fails --> email sent to info@therangelangley.com & row added to FailedStaffValidation spreadsheet
+        // validation fails --> email sent to EMAIL_ADDRESS & row added to FailedStaffValidation spreadsheet
         
         // pass variables to email
         ValidationTestSixEmail(StaffName, memberNo, FormName, LockerNo);
@@ -558,7 +558,7 @@ function ValidationTests(SheetName, thisRow, FormName, StaffName, vts) {
           // form locker number doesn't match database locker number.
           
           
-          // validation fails --> email sent to info@therangelangley.com & row added to FailedStaffValidation spreadsheet
+          // validation fails --> email sent to EMAIL_ADDRESS & row added to FailedStaffValidation spreadsheet
           
           // pass variables to email
           ValidationTestSixEmail(StaffName, memberNo, FormName, LockerNo);
@@ -610,7 +610,7 @@ function ValidationTests(SheetName, thisRow, FormName, StaffName, vts) {
     if ( al_lockerNos.length <=al_MemberNos.length){
       
       // there are no lockers available for rental
-      // validation fails --> email sent to info@therangelangley.com & row added to FailedStaffValidation spreadsheet
+      // validation fails --> email sent to EMAIL_ADDRESS & row added to FailedStaffValidation spreadsheet
       
       // pass variables to email
       ValidationTestSevenEmail(StaffName, FormName);
@@ -743,7 +743,7 @@ function ValidationTests(SheetName, thisRow, FormName, StaffName, vts) {
         
         
         // there are no lockers available for rental
-        // validation fails --> email sent to info@therangelangley.com & row added to FailedStaffValidation spreadsheet
+        // validation fails --> email sent to EMAIL_ADDRESS & row added to FailedStaffValidation spreadsheet
         
         // pass variables to email
         ValidationTestEightEmail(StaffName, memberNo, FormName, PAL_expiry);
@@ -810,7 +810,7 @@ function ValidationTests(SheetName, thisRow, FormName, StaffName, vts) {
         
         
         // Age is below 18 --> therefore cannot have a primary membership or adult add-on account
-        // validation fails --> email sent to info@therangelangley.com & row added to FailedStaffValidation spreadsheet
+        // validation fails --> email sent to EMAIL_ADDRESS & row added to FailedStaffValidation spreadsheet
         
         // pass variables to email
         ValidationTestNineEmail(StaffName, memberNo, majority, FormName);
@@ -875,7 +875,7 @@ function ValidationTests(SheetName, thisRow, FormName, StaffName, vts) {
         
         
         // Age is below 18 --> therefore cannot have a primary membership or adult add-on account
-        // validation fails --> email sent to info@therangelangley.com & row added to FailedStaffValidation spreadsheet
+        // validation fails --> email sent to EMAIL_ADDRESS & row added to FailedStaffValidation spreadsheet
         
         // pass variables to email
         ValidationTestTenEmail(StaffName, memberNo, majority, FormName);
@@ -968,7 +968,7 @@ function ValidationTests(SheetName, thisRow, FormName, StaffName, vts) {
       
       if (today > primaryRangeExp){
         // primary membership is expired --> validation fault tripped.
-        // validation fails --> email sent to info@therangelangley.com & row added to FailedStaffValidation spreadsheet
+        // validation fails --> email sent to EMAIL_ADDRESS & row added to FailedStaffValidation spreadsheet
         
         // pass variables to email
         ValidationTestElevenEmail(StaffName, memberNo, primaryMember, FormName);
@@ -1012,7 +1012,7 @@ function ValidationTests(SheetName, thisRow, FormName, StaffName, vts) {
     if(String(MemberTact).length > 0){
       // validation tripped --> member already has an existing tactical certification number
       
-      // validation fails --> email sent to info@therangelangley.com & row added to FailedStaffValidation spreadsheet
+      // validation fails --> email sent to EMAIL_ADDRESS & row added to FailedStaffValidation spreadsheet
       
       // pass variables to email
       ValidationTestTwelveEmail(StaffName, memberNo, FormName);
@@ -1070,7 +1070,7 @@ function ValidationTests(SheetName, thisRow, FormName, StaffName, vts) {
           
           // validation test fails member cannot renew as an IND member.
           
-          // validation fails --> email sent to info@therangelangley.com & row added to FailedStaffValidation spreadsheet
+          // validation fails --> email sent to EMAIL_ADDRESS & row added to FailedStaffValidation spreadsheet
           
           // pass variables to email
           ValidationTestThirteenEmail(StaffName, memberNo, FormName);
@@ -1162,7 +1162,7 @@ function ValidationTests(SheetName, thisRow, FormName, StaffName, vts) {
         
         if( primaryRangeExpiry < today){
           // range membership expired 
-          // validation fails --> email sent to info@therangelangley.com & row added to FailedStaffValidation spreadsheet
+          // validation fails --> email sent to EMAIL_ADDRESS & row added to FailedStaffValidation spreadsheet
           
           // pass variables to email
           //invalidPasscode (form_staff_member,FormName)
@@ -1245,7 +1245,7 @@ function ValidationTests(SheetName, thisRow, FormName, StaffName, vts) {
         
         if( minorBirthdate < today){
           // member is not a minor
-          // validation fails --> email sent to info@therangelangley.com & row added to FailedStaffValidation spreadsheet
+          // validation fails --> email sent to EMAIL_ADDRESS & row added to FailedStaffValidation spreadsheet
           
           // pass variables to email
           ValidationTestNineEmail(StaffName, memberNo, majority, FormName);
@@ -1318,7 +1318,7 @@ function ValidationTests(SheetName, thisRow, FormName, StaffName, vts) {
         
         if( minorBirthdate > today){
           // range membership expired 
-          // validation fails --> email sent to info@therangelangley.com & row added to FailedStaffValidation spreadsheet
+          // validation fails --> email sent to EMAIL_ADDRESS & row added to FailedStaffValidation spreadsheet
           
           // pass variables to email
           ValidationTestElevenEmail(StaffName, memberNo, primaryMember, FormName);

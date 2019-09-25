@@ -1,4 +1,4 @@
-// data comes from --> AddonValidation.gs or UserValidation.gs
+// data comes from --> ValidationTests.gs
 // This module will send emails to ensure database integrity
 
 
